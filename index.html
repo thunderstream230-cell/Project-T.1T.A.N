@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Project T.I.T.A.N</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-grid"></div>
+
+  <main class="app-shell">
+    <section class="sidebar">
+      <div class="brand">
+        <div class="logo">T</div>
+        <div>
+          <h1>Project T.I.T.A.N</h1>
+          <p>Tactical Interactive Thought Assistant Network</p>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Companion Online</strong>
+          <p id="modeLabel">Local demo mode</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Companion Settings</h2>
+
+        <label for="companionName">Name</label>
+        <input id="companionName" type="text" value="T.I.T.A.N" />
+
+        <label for="companionTone">Tone</label>
+        <select id="companionTone">
+          <option value="balanced">Balanced</option>
+          <option value="friendly">Friendly</option>
+          <option value="direct">Direct</option>
+          <option value="tactical">Tactical</option>
+        </select>
+
+        <button id="saveSettingsButton" class="secondary-button">Save Settings</button>
+      </div>
+
+      <div class="panel">
+        <h2>Memory</h2>
+        <p class="small-text">
+          Saves locally in this browser only.
+        </p>
+        <textarea id="memoryBox" placeholder="Example: I like short answers. I am building a Minecraft addon."></textarea>
+        <button id="saveMemoryButton" class="secondary-button">Save Memory</button>
+      </div>
+
+      <button id="clearChatButton" class="danger-button">Clear Chat</button>
+    </section>
+
+    <section class="chat-section">
+      <header class="chat-header">
+        <div>
+          <h2 id="chatTitle">T.I.T.A.N</h2>
+          <p id="chatSubtitle">Your AI companion interface</p>
+        </div>
+
+        <button id="exportChatButton" class="secondary-button">Export Chat</button>
+      </header>
+
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          id="messageInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Message T.I.T.A.N..."
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

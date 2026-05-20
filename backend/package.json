@@ -1,0 +1,16 @@
+{
+  "name": "project-titan-backend",
+  "version": "1.0.0",
+  "description": "Safe backend for Project T.I.T.A.N AI companion.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3",
+    "openai": "^4.85.4"
+  }
+}
