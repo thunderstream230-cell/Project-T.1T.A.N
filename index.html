@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project T.I.T.A.N HUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <main class="hud-shell">
+    <aside class="left-rail glass">
+      <div class="brand-block">
+        <div class="core-ring">
+          <div class="core-inner">T</div>
+        </div>
+        <div>
+          <p class="eyebrow">PROJECT</p>
+          <h1>T.I.T.A.N</h1>
+          <p class="muted">Addon Intelligence HUD</p>
+        </div>
+      </div>
+
+      <section class="system-card">
+        <div class="status-row">
+          <span class="pulse"></span>
+          <div>
+            <strong>System Online</strong>
+            <p id="systemMode">Local knowledge engine</p>
+          </div>
+        </div>
+        <div class="mini-grid">
+          <div>
+            <span id="itemCount">0</span>
+            <p>Items</p>
+          </div>
+          <div>
+            <span id="scriptCount">0</span>
+            <p>Scripts</p>
+          </div>
+          <div>
+            <span id="powerCount">0</span>
+            <p>Powers</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <span></span>
+          <h2>Quick Questions</h2>
+        </div>
+        <div id="quickQuestions" class="quick-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <span></span>
+          <h2>Local Memory</h2>
+        </div>
+        <textarea id="memoryBox" placeholder="Example: Explain things for addon users. Focus on power obtainment and scripts."></textarea>
+        <button id="saveMemoryBtn" class="ghost-btn">Save Memory</button>
+      </section>
+    </aside>
+
+    <section class="main-console glass">
+      <header class="console-header">
+        <div>
+          <p class="eyebrow">COMPANION INTERFACE</p>
+          <h2 id="companionTitle">T.I.T.A.N</h2>
+          <p class="muted">Ask about powers, obtainment methods, item IDs, scripts, and mechanics.</p>
+        </div>
+        <div class="header-actions">
+          <button id="exportBtn" class="ghost-btn">Export</button>
+          <button id="clearBtn" class="danger-btn">Clear</button>
+        </div>
+      </header>
+
+      <div id="chatWindow" class="chat-window"></div>
+
+      <form id="chatForm" class="command-bar">
+        <div class="command-prefix">ASK</div>
+        <input id="messageInput" type="text" placeholder="Example: how do I obtain flight?" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <aside class="right-rail glass">
+      <section class="panel">
+        <div class="panel-title">
+          <span></span>
+          <h2>Pack Search</h2>
+        </div>
+        <input id="searchInput" class="search" type="text" placeholder="Search powers, items, scripts..." />
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="items">Items</button>
+          <button class="filter-btn" data-filter="scripts">Scripts</button>
+          <button class="filter-btn" data-filter="powers">Powers</button>
+        </div>
+        <div id="searchResults" class="results"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <span></span>
+          <h2>Detected Systems</h2>
+        </div>
+        <div id="detectedSystems" class="chip-box"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <span></span>
+          <h2>Guide Notes</h2>
+        </div>
+        <div id="guideNotes" class="guide-notes"></div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
